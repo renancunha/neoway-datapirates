@@ -14,7 +14,7 @@ class TopRatedByGenreSpider(CrawlSpider):
         self.genre = genre
         self.fetch_size = fetch_size
         self.start_urls = [
-            'https://www.imdb.com/search/title?genres=%s&sort=user_rating,desc&title_type=feature&num_votes=25000,&pf_rd_m=A2FGELUUNOQJNL&pf_rd_p=5aab685f-35eb-40f3-95f7-c53f09d542c3&pf_rd_r=7D2DBK2FMRF92RDX51EQ&pf_rd_s=right-6&pf_rd_t=15506&pf_rd_i=top&ref_=chttp_gnr_1' % genre,
+            'https://www.imdb.com/search/title?genres=%s&sort=user_rating,desc&title_type=feature&num_votes=0,&pf_rd_m=A2FGELUUNOQJNL&pf_rd_p=5aab685f-35eb-40f3-95f7-c53f09d542c3&pf_rd_r=7D2DBK2FMRF92RDX51EQ&pf_rd_s=right-6&pf_rd_t=15506&pf_rd_i=top&ref_=chttp_gnr_1' % genre,
         ]
     
     def parse(self, response):
@@ -22,7 +22,7 @@ class TopRatedByGenreSpider(CrawlSpider):
         Default callback used to scrapy the movies list and get the titles
         
         Testing Contracts:
-        @url https://www.imdb.com/search/title?genres=action&sort=user_rating,desc&title_type=feature&num_votes=25000,&pf_rd_m=A2FGELUUNOQJNL&pf_rd_p=5aab685f-35eb-40f3-95f7-c53f09d542c3&pf_rd_r=7D2DBK2FMRF92RDX51EQ&pf_rd_s=right-6&pf_rd_t=15506&pf_rd_i=top&ref_=chttp_gnr_1
+        @url https://www.imdb.com/search/title?genres=action&sort=user_rating,desc&title_type=feature&num_votes=0,&pf_rd_m=A2FGELUUNOQJNL&pf_rd_p=5aab685f-35eb-40f3-95f7-c53f09d542c3&pf_rd_r=7D2DBK2FMRF92RDX51EQ&pf_rd_s=right-6&pf_rd_t=15506&pf_rd_i=top&ref_=chttp_gnr_1
         @returns items 1
         @scrapes title year rating
         """
